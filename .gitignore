@@ -1,0 +1,45 @@
+# === Backend (Python) ===
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/.pytest_cache/
+backend/.mypy_cache/
+*.sqlite3
+
+# === Frontend (Node/React) ===
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# === Common OS/Editor files ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# === Mac/Windows/Editor files ===
+*.swp
+*.swo
+
+# === General Python cache ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Test and coverage files ===
+coverage.*
+*.cover
+.hypothesis/
+
+# === Logs and temp files ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# === Misc ===
+*.bak
+*.tmp
