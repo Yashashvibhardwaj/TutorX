@@ -9,11 +9,15 @@ function CodeReviewSection() {
     e.preventDefault();
     setLoading(true);
     setReview("");
+    const token = localStorage.getItem("token");
     try {
       const res = await fetch("http://localhost:8000/review", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({ code })
       });
       const data = await res.json();
       setReview(data.review || "No review.");

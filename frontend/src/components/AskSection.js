@@ -7,11 +7,15 @@ function AskSection() {
   const handleAsk = async (e) => {
     e.preventDefault();
     setResponse("Loading...");
+    const token = localStorage.getItem("token");
     try {
       const res = await fetch("http://localhost:8000/ask", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({ message: input })
       });
       const data = await res.json();
       setResponse(data.response || "No response.");
