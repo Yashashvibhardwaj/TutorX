@@ -1,45 +1,96 @@
-# === Backend (Python) ===
-backend/venv/
-backend/__pycache__/
-backend/*.pyc
-backend/.env
-backend/.pytest_cache/
-backend/.mypy_cache/
-*.sqlite3
-
-# === Frontend (Node/React) ===
-frontend/node_modules/
-frontend/build/
-frontend/.env
-
-# === Common OS/Editor files ===
+# =========================
+# OS / Editor / IDE junk
+# =========================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# VSCode / JetBrains / Vim swap files
 .vscode/
 .idea/
-*.log
-
-# === Mac/Windows/Editor files ===
+*.sublime-workspace
+*.sublime-project
 *.swp
 *.swo
 
-# === General Python cache ===
-__pycache__/
-*.py[cod]
-*$py.class
-
-# === Test and coverage files ===
-coverage.*
-*.cover
-.hypothesis/
-
-# === Logs and temp files ===
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-logs/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+**/build/
+coverage/
+*.tgz
+
+# =========================
+# Python / Backend
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+db.sqlite3
+*.sqlite3
+.python-version
+*.cover
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Environment & secrets
+# =========================
+.env
+.env.* 
+*.env
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# =========================
+# Build / packaging
+# =========================
+/dist/
+/tmp/
+/out/
+target/
 *.log
 
-# === Misc ===
-*.bak
-*.tmp
+# =========================
+# Binary / media files (optional - remove if you want checked-in media)
+# =========================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+*.avi
+*.pdf
+
+# =========================
+# Misc
+# =========================
+.vagrant/
+.terraform/
+*.iml
